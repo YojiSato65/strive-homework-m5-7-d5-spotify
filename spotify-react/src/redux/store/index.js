@@ -14,6 +14,10 @@ export const initialState =  {
         liked: [],
       },
 
+      selectedSong: {
+          selected: null
+      }
+
     };
 
 const configureStore = createStore(

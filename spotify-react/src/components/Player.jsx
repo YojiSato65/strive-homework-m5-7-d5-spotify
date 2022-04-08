@@ -1,7 +1,17 @@
 import React from "react";
 import { Row } from "react-bootstrap";
+import { connect } from "react-redux";
 
-const Player = () => (
+
+
+const mapStateToProps=(state) => ({
+selectedSong: state.selectedSong.selected
+})
+
+
+
+
+const Player = (props) => (
   <div className="container-fluid fixed-bottom bg-container pt-1">
     <Row>
       <div className="col-lg-10 offset-lg-2">
@@ -44,4 +54,4 @@ const Player = () => (
   </div>
 );
 
-export default Player;
+export default connect(mapStateToProps)(Player);
