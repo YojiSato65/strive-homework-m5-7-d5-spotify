@@ -14,17 +14,21 @@ let headers = new Headers({
   "X-RapidAPI-Key": "222902beabmshb95a65b737cead6p1f3ac9jsn23ced94c0d20",
 });
 
-class App extends React.Component {
+class App extends React.Component
+{
   state = {
     searchResults: [],
   };
 
-  search = async (string) => {
-    if (string.length > 2) {
-      try {
+  search = async (string) =>
+  {
+    if (string.length > 2)
+    {
+      try
+      {
         let response = await fetch(
           "https://striveschool-api.herokuapp.com/api/deezer/search?q=" +
-            string,
+          string,
           {
             method: "GET",
             headers,
@@ -37,13 +41,15 @@ class App extends React.Component {
         this.setState({
           searchResults: songs,
         });
-      } catch (err) {
+      } catch (err)
+      {
         console.log(err);
       }
     }
   };
 
-  render() {
+  render()
+  {
     return (
       <Router>
         <div className="container-fluid">
@@ -56,7 +62,7 @@ class App extends React.Component {
             />
             <Route path="/artist/:id" component={Artist} />
             <Route path="/album/:id" component={Album} />
-            <Route path="/favorites" element = {<LikedSongs/>} />
+            <Route path="/favorites" component={LikedSongs} />
           </Row>
         </div>
         <Player />

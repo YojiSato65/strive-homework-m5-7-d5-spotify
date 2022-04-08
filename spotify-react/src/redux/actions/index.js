@@ -8,8 +8,8 @@ export const addToLikedAction = (track) => ({
 })
 
 
-export const setSelectedSongAction =(track) => ({
+export const setSelectedSongAction = (track, albumImg) => ({
     type: SET_SELECTED_SONG,
-    payload: track
+    payload: { track, albumImg }
 })
 

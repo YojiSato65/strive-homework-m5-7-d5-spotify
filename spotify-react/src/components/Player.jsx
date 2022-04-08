@@ -1,19 +1,13 @@
-import { connect } from "react-redux";
+import { connect } from 'react-redux'
 import React from 'react'
 import { Row, Image } from 'react-bootstrap'
 import { AiOutlineHeart } from 'react-icons/ai'
 
-
-
-
-const mapStateToProps=(state) => ({
-selectedSong: state.selectedSong.selected
+const mapStateToProps = (state) => ({
+  selectedSong: state.selectedSong.selected,
 })
 
-
-
-
-const Player = (props) => (
+const Player = ({ selectedSong }) => (
   <div className="container-fluid fixed-bottom bg-container pt-1">
     <Row>
       <div className="col-lg-10 offset-lg-2 d-flex">
@@ -22,8 +16,12 @@ const Player = (props) => (
             <Image src="https://via.placeholder.com/50" />
           </div>
           <div>
-            <h5 style={{ color: 'white', fontSize: '1em' }}>Song title</h5>
-            <p style={{ color: 'white', fontSize: '0.8em' }}>Artist name</p>
+            <h5 style={{ color: 'white', fontSize: '1em' }}>
+              {selectedSong?.title}
+            </h5>
+            <p style={{ color: 'white', fontSize: '0.8em' }}>
+              {selectedSong?.artist?.name}
+            </p>
           </div>
           <div className="pt-2 ml-2">
             <button className="song-like-button ml-auto mr-5">
@@ -72,5 +70,4 @@ const Player = (props) => (
   </div>
 )
 
-export default connect(mapStateToProps)(Player);
-
+export default connect(mapStateToProps)(Player)
