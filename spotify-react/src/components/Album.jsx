@@ -37,7 +37,7 @@ class Album extends React.Component {
     }
   };
 
-  
+
   render() {
     return (
       <div className="col-12 col-md-9 offset-md-3 mainPage">
@@ -77,7 +77,7 @@ class Album extends React.Component {
             <Row>
               <div className="col-md-10 mb-5" id="trackList">
                 {this.state.songs.map((song) => (
-                  <Song track={song} key={song.id} />
+                  <Song track={song} key={song.id}  />
                 ))}
               </div>
             </Row>

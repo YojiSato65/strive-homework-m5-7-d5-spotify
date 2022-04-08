@@ -17,6 +17,7 @@ const Song = ({ track }) => (
       {parseInt(track.duration) % 60 < 10
         ? '0' + (parseInt(track.duration) % 60)
         : parseInt(track.duration) % 60}
+       
     </small>
   </div>
 )
