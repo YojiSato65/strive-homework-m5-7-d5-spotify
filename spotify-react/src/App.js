@@ -56,7 +56,7 @@ class App extends React.Component {
             />
             <Route path="/artist/:id" component={Artist} />
             <Route path="/album/:id" component={Album} />
-            <Route path="/favorites" component = {<LikedSongs/>} />
+            <Route path="/favorites" element = {<LikedSongs/>} />
           </Row>
         </div>
         <Player />

@@ -13,21 +13,27 @@ const mapDispatchToProps = (dispatch) => ({
 class LikedSongs extends React.Component {
     render() {
         return (
-            <Container>
-                <Row>
-                    <Col>
-                        <ListGroup>
-                        {
-                            this.props.favorites.map(() => (
-                                <ListGroupItem>
+            <div>
+                <Container>
+                    <Row>
+                        <Col>
+                            <ListGroup>
+                           {/*  {
+                                this.props.favorites.map(() => (
+                                    <ListGroupItem>
+                
+                                    </ListGroupItem>
+                                ))
+                            } */}
+                            </ListGroup>
+                        </Col>
+                    </Row>
+                </Container>
 
-                                </ListGroupItem>
-                            ))
-                        }
-                        </ListGroup>
-                    </Col>
-                </Row>
-            </Container>
+                <h1 style={{color:"black", fontSize:"76px", marginLeft: "300px"}}>Title</h1>
+            </div>
+
+          
         )
     }
 }

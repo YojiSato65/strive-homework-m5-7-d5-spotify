@@ -1,6 +1,9 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
+
+
+
 class Sidebar extends React.Component {
   state = {
     searchInput: "",
@@ -48,7 +51,7 @@ class Sidebar extends React.Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/" className="nav-item nav-link">
+                    <Link to={"/favorites"} className="nav-item nav-link">
                       <i className="fas fa-light fa-heart fa-lg"></i>&nbsp; Liked
                       Songs
                     </Link>
