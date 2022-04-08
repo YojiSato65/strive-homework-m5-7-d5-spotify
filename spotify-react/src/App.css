@@ -230,3 +230,10 @@ ul {
 .mainPage img {
   width: 200px;
 }
+
+/* song section */
+.song-like-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
